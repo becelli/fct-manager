@@ -1,4 +1,4 @@
-package src.main;
+package src.model;
 
 public abstract class Employee {
     protected String id;

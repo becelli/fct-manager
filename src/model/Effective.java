@@ -1,4 +1,4 @@
-package src.main;
+package src.model;
 
 public class Effective extends Professor {
     private String area;

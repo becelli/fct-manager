@@ -1,12 +1,12 @@
-package src.main;
+
+package src.view;
 
 import java.util.Random;
 
 public class Main {
     public static void main(String args[]) {
+        int MAX = 20;
         Random rand = new Random();
-        int MAX = 2000000;
-        Employee employee[] = new Employee[MAX];
         for (int i = 0; i < MAX; i++) {
             int f = rand.nextInt(3);
             if (f == 0) {
@@ -84,9 +84,7 @@ public class Main {
                 employee[i] = new Technician(Integer.toString(i + 1), "Jackson", s, nivel, funcao);
             }
         }
-        for (
-
-                int i = 0; i < MAX; i++) {
+        for (int i = 0; i < MAX; i++) {
             if (employee[i] instanceof Technician) {
                 Technician e = (Technician) employee[i];
                 System.out.println(e.getId() + " " + e.getName() + " " + e.calculateSalary() + " " + e.getLevel() + " "

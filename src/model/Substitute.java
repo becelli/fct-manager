@@ -1,4 +1,4 @@
-package src.main;
+package src.model;
 
 public class Substitute extends Professor {
     private int workLoad;
