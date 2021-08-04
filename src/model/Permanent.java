@@ -1,14 +1,14 @@
 package src.model;
 
-public class Effective extends Professor {
+public class Permanent extends Professor {
     private String area;
 
-    public Effective() {
+    public Permanent() {
         super();
         this.area = "";
     }
 
-    public Effective(String id, String name, double salary, String level, String degree, String area) {
+    public Permanent(String id, String name, double salary, String level, String degree, String area) {
         super(id, name, salary, level, degree);
         this.area = area;
     }
