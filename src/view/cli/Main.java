@@ -1,4 +1,4 @@
-package src.view;
+package src.view.cli;
 
 import src.controller.Controller;
 
