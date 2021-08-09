@@ -43,8 +43,13 @@ public class University {
         return null;
     }
 
-    public String showDepartmentInfo(String code) {
+    public String showDepartmentInfoByCode(String code) {
         Department d = searchDepartmentByCode(code);
+        return d.report() + "\n" + d.getAllEmployees();
+    }
+
+    public String showDepartmentInfoByName(String name) {
+        Department d = searchDepartmentByName(name);
         return d.report() + "\n" + d.getAllEmployees();
     }
 
@@ -82,6 +87,13 @@ public class University {
         String all[] = new String[count];
         for (int i = 0; i < count; i++)
             all[i] = departments[i].getName();
+        return all;
+    }
+
+    public String[] getAllDepartmentsCode() {
+        String all[] = new String[count];
+        for (int i = 0; i < count; i++)
+            all[i] = departments[i].getCode();
         return all;
     }
 

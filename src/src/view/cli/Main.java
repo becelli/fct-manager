@@ -8,25 +8,26 @@ import src.model.Permanent;
 public class Main {
     public static void main(String args[]) {
         Controller c = new Controller();
-        c.addDepartment("MATEMATICA");
-        c.addDepartment("FÍSICA");
-        c.addTechnician("MATEMATICA", "001", "GUSTAVO", 3000.0, "T1", "Assessor");
-        c.addTechnician("MATEMATICA", "001", "GUSTAO", 3000.0, "T2", "Faxineiro");
-        c.addTechnician("FÍSICA", "001", "GUSTAO", 3000.0, "T3", "Cavalheiro");
-        c.addSubstitute("FÍSICA", "001", "GUSTAVO", 1500.0, "T1", "PHD", 12);
-        c.addPermanent("MATEMATICA", "001", "GUSTAVO", 3000.0, "T1", "Mestre", "Astrofísica");
-        // c.addTechnician("MATEMATICA", "002", "GUSTAV3", 3000.0, "T2", "Assessor");
-        // c.printGeneralReport();
-        // System.out.println(c.getAllEmployees());
-        // System.out.println(c.departmentReport());
-        // System.out.println(c.employeeReportByCost(1000, 2000));
-        // System.out.println(c.technicianReport());
-        // System.out.println(c.professorReport());
-        // System.out.println(c.permanentReport());
-        // System.out.println(c.substituteReport());
-        System.out.println(c.showDepartmentInfo(Integer.toString(2)));
+        // c.addDepartment("MATEMATICA");
+        // c.addDepartment("FÍSICA");
+        // c.addTechnician("MATEMATICA", "001", "GUSTAVO", 3000.0, "T1", "Assessor");
+        // c.addTechnician("MATEMATICA", "001", "GUSTAO", 3000.0, "T2", "Faxineiro");
+        // c.addTechnician("FÍSICA", "001", "GUSTAO", 3000.0, "T3", "Cavalheiro");
+        // c.addSubstitute("FÍSICA", "001", "GUSTAVO", 1500.0, "T1", "PHD", 12);
+        // c.addPermanent("MATEMATICA", "001", "GUSTAVO", 3000.0, "T1", "Mestre",
+        // "Astrofísica");
+        // // c.addTechnician("MATEMATICA", "002", "GUSTAV3", 3000.0, "T2", "Assessor");
+        // // c.printGeneralReport();
+        // // System.out.println(c.getAllEmployees());
+        // // System.out.println(c.departmentReport());
+        // // System.out.println(c.employeeReportByCost(1000, 2000));
+        // // System.out.println(c.technicianReport());
+        // // System.out.println(c.professorReport());
+        // // System.out.println(c.permanentReport());
+        // // System.out.println(c.substituteReport());
+        // System.out.println(c.showDepartmentInfo(Integer.toString(2)));
 
-        // int MAX = 20;
+        // // int MAX = 20;
         // Random rand = new Random();
         // for (int i = 0; i < MAX; i++) {
         // int f = rand.nextInt(3);

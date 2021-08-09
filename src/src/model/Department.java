@@ -81,7 +81,8 @@ public class Department implements Cloneable {
     }
 
     public String report() {
-        return this.getName() + " " + count + " " + String.format("%.2f", totalCost());
+        return getCode() + " - " + getName() + " " + count + " funcionários(as) " + "R$"
+                + String.format("%.2f", totalCost());
     }
 
     public String getEmployeeInfo(Employee e) {

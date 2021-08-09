@@ -181,10 +181,20 @@ public class GUI extends javax.swing.JFrame {
 
         searchDepartmentByCode.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
         searchDepartmentByCode.setText("Código");
+        searchDepartmentByCode.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchDepartmentByCodeActionPerformed(evt);
+            }
+        });
         searchDepartment.add(searchDepartmentByCode);
 
         searchDepartmentByName.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
         searchDepartmentByName.setText("Nome");
+        searchDepartmentByName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchDepartmentByNameActionPerformed(evt);
+            }
+        });
         searchDepartment.add(searchDepartmentByName);
 
         searchMenu.add(searchDepartment);
@@ -331,6 +341,22 @@ public class GUI extends javax.swing.JFrame {
             }
         });
     }//GEN-LAST:event_generalReportActionPerformed
+
+    private void searchDepartmentByCodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchDepartmentByCodeActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new searchDepartmentByCode(c).setVisible(true);
+            }
+        });
+    }//GEN-LAST:event_searchDepartmentByCodeActionPerformed
+
+    private void searchDepartmentByNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchDepartmentByNameActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new searchDepartmentByName(c).setVisible(true);
+            }
+        });
+    }//GEN-LAST:event_searchDepartmentByNameActionPerformed
 
     private void addSubstituteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_addSubstituteActionPerformed
         java.awt.EventQueue.invokeLater(new Runnable() {

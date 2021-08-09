@@ -27,8 +27,12 @@ public class Controller {
         return university.searchDepartmentByCode(code);
     }
 
-    public String showDepartmentInfo(String code) {
-        return university.showDepartmentInfo(code);
+    public String showDepartmentInfoByCode(String code) {
+        return university.showDepartmentInfoByCode(code);
+    }
+
+    public String showDepartmentInfoByName(String name) {
+        return university.showDepartmentInfoByName(name);
     }
 
     public void addTechnician(String department, String id, String name, double salary, String level, String function) {
@@ -99,5 +103,9 @@ public class Controller {
 
     public String[] getAllDepartmentsName() {
         return university.getAllDepartmentsName();
+    }
+
+    public String[] getAllDepartmentsCode() {
+        return university.getAllDepartmentsCode();
     }
 }
