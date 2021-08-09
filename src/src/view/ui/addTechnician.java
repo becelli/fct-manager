@@ -4,28 +4,34 @@ import src.controller.Controller;
 
 public class addTechnician extends javax.swing.JFrame {
     private Controller c;
+
     public addTechnician(Controller c) {
         this.c = c;
         initComponents();
     }
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         nameLabel = new javax.swing.JLabel();
-        dpName = new javax.swing.JTextField();
+        technicianName = new javax.swing.JTextField();
         Title = new javax.swing.JLabel();
         codeLabel = new javax.swing.JLabel();
         cancelButton = new javax.swing.JButton();
         addButton = new javax.swing.JButton();
-        dpCode = new javax.swing.JTextField();
-        nameLabel1 = new javax.swing.JLabel();
-        nameLabel2 = new javax.swing.JLabel();
-        nameLabel3 = new javax.swing.JLabel();
-        dpName1 = new javax.swing.JTextField();
-        dpName2 = new javax.swing.JTextField();
-        dpName3 = new javax.swing.JTextField();
+        salaryLabel = new javax.swing.JLabel();
+        levelLabel = new javax.swing.JLabel();
+        functionLabel = new javax.swing.JLabel();
+        salaryArea = new javax.swing.JTextField();
+        levelBox = new javax.swing.JComboBox<>();
+        functionBox = new javax.swing.JComboBox<>();
+        departmentBox = new javax.swing.JComboBox<>();
+        technicianCode = new javax.swing.JTextField();
+        codeLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(480, 270));
@@ -33,9 +39,9 @@ public class addTechnician extends javax.swing.JFrame {
 
         nameLabel.setText("Nome:");
 
-        dpName.addActionListener(new java.awt.event.ActionListener() {
+        technicianName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dpNameActionPerformed(evt);
+                technicianNameActionPerformed(evt);
             }
         });
 
@@ -60,129 +66,144 @@ public class addTechnician extends javax.swing.JFrame {
             }
         });
 
-        dpCode.setText(Integer.toString(c.getNewDepartmentCode()));
-        dpCode.setEnabled(false);
-        dpCode.addActionListener(new java.awt.event.ActionListener() {
+        salaryLabel.setText("Salário:");
+
+        levelLabel.setText("Nível:");
+
+        functionLabel.setText("Função:");
+
+        salaryArea.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dpCodeActionPerformed(evt);
+                salaryAreaActionPerformed(evt);
             }
         });
 
-        nameLabel1.setText("Salário:");
-
-        nameLabel2.setText("Nível:");
-
-        nameLabel3.setText("Função:");
-
-        dpName1.addActionListener(new java.awt.event.ActionListener() {
+        levelBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "T1", "T2" }));
+        levelBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dpName1ActionPerformed(evt);
+                levelBoxActionPerformed(evt);
             }
         });
 
-        dpName2.addActionListener(new java.awt.event.ActionListener() {
+        functionBox.setModel(
+                new javax.swing.DefaultComboBoxModel<>(new String[] { "Assessor", "Secretário", "Laboratório" }));
+        functionBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dpName2ActionPerformed(evt);
+                functionBoxActionPerformed(evt);
             }
         });
 
-        dpName3.addActionListener(new java.awt.event.ActionListener() {
+        departmentBox.setModel(new javax.swing.DefaultComboBoxModel<>(c.getAllDepartmentsName()));
+
+        technicianCode.setText(Integer.toString(c.getTotalEmployees()));
+        technicianCode.setEnabled(false);
+        technicianCode.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dpName3ActionPerformed(evt);
+                technicianCodeActionPerformed(evt);
             }
         });
+
+        codeLabel1.setText("Código do Funcionário:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Title, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(codeLabel)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(dpCode, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(nameLabel)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(dpName, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(nameLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(dpName1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(nameLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(dpName2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(149, 149, 149)
-                        .addComponent(cancelButton)
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(nameLabel3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(dpName3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(addButton))))
-                .addContainerGap(36, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+        layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(Title, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE,
+                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createSequentialGroup().addGroup(layout
+                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup().addGap(21, 21, 21).addGroup(layout
+                                .createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING,
+                                        layout.createSequentialGroup().addComponent(nameLabel).addPreferredGap(
+                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(technicianName, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        380, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING,
+                                        layout.createSequentialGroup().addComponent(codeLabel).addPreferredGap(
+                                                javax.swing.LayoutStyle.ComponentPlacement.UNRELATED).addComponent(
+                                                        departmentBox, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING,
+                                        layout.createSequentialGroup().addComponent(codeLabel1).addPreferredGap(
+                                                javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(technicianCode, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(layout.createSequentialGroup().addComponent(levelLabel)
+                                                        .addGap(11, 11, 11))
+                                                .addComponent(salaryLabel, javax.swing.GroupLayout.Alignment.TRAILING))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(salaryArea, javax.swing.GroupLayout.PREFERRED_SIZE, 114,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(levelBox, javax.swing.GroupLayout.PREFERRED_SIZE, 114,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGroup(layout.createSequentialGroup().addGap(149, 149, 149).addComponent(cancelButton)
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(addButton)
+                                        .addGroup(layout.createSequentialGroup().addComponent(functionLabel)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(functionBox, javax.swing.GroupLayout.PREFERRED_SIZE, 132,
+                                                        javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addContainerGap(36, Short.MAX_VALUE)));
+        layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGroup(layout
+                .createSequentialGroup().addContainerGap()
                 .addComponent(Title, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING).addComponent(nameLabel)
+                        .addComponent(technicianName, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED,
+                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nameLabel)
-                    .addComponent(dpName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
+                        .addComponent(codeLabel1).addComponent(technicianCode, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(9, 9, 9)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE).addComponent(codeLabel)
+                        .addComponent(departmentBox, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(codeLabel)
-                    .addComponent(dpCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(salaryLabel).addComponent(salaryArea, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nameLabel1)
-                    .addComponent(dpName1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nameLabel3)
-                    .addComponent(nameLabel2)
-                    .addComponent(dpName2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(dpName3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(47, 47, 47)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cancelButton)
-                    .addComponent(addButton))
-                .addGap(23, 23, 23))
-        );
+                        .addComponent(levelBox, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(levelLabel).addComponent(functionLabel).addComponent(functionBox,
+                                javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(36, 36, 36).addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(cancelButton).addComponent(addButton))
+                .addGap(14, 14, 14)));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void dpNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dpNameActionPerformed
+    private void technicianNameActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_technicianNameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dpNameActionPerformed
+    }// GEN-LAST:event_technicianNameActionPerformed
 
-    private void dpCodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dpCodeActionPerformed
+    private void salaryAreaActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_salaryAreaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dpCodeActionPerformed
+    }// GEN-LAST:event_salaryAreaActionPerformed
 
-    private void dpName1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dpName1ActionPerformed
+    private void levelBoxActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_levelBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dpName1ActionPerformed
+    }// GEN-LAST:event_levelBoxActionPerformed
 
-    private void dpName2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dpName2ActionPerformed
+    private void functionBoxActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_functionBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dpName2ActionPerformed
+    }// GEN-LAST:event_functionBoxActionPerformed
 
-    private void dpName3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dpName3ActionPerformed
+    private void technicianCodeActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_technicianCodeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_dpName3ActionPerformed
+    }// GEN-LAST:event_technicianCodeActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {
     }
@@ -192,14 +213,17 @@ public class addTechnician extends javax.swing.JFrame {
     }
 
     private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {
-        if(dpName.getText().length() > 3){
-            c.addTechnician(tDp.getText(), Integer.toString(c.getTotalEmployees()), tName.getText(), Double.parseDouble(tSalary.getText()), tLevel.getText(), tFunc.getText());
+        if (technicianName.getText().length() > 3) {
+            c.addTechnician(departmentBox.getSelectedItem().toString(), Integer.toString(c.getTotalEmployees()),
+                    technicianName.getText(), Double.parseDouble(salaryArea.getText()),
+                    levelBox.getSelectedItem().toString(), functionBox.getSelectedItem().toString());
             this.dispose();
         }
     }
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {
     }
+
     public static void main(String args[]) {
 
         try {
@@ -229,14 +253,16 @@ public class addTechnician extends javax.swing.JFrame {
     private javax.swing.JButton addButton;
     private javax.swing.JButton cancelButton;
     private javax.swing.JLabel codeLabel;
-    private javax.swing.JTextField dpCode;
-    private javax.swing.JTextField dpName;
-    private javax.swing.JTextField dpName1;
-    private javax.swing.JTextField dpName2;
-    private javax.swing.JTextField dpName3;
+    private javax.swing.JLabel codeLabel1;
+    private javax.swing.JComboBox<String> departmentBox;
+    private javax.swing.JComboBox<String> functionBox;
+    private javax.swing.JLabel functionLabel;
+    private javax.swing.JComboBox<String> levelBox;
+    private javax.swing.JLabel levelLabel;
     private javax.swing.JLabel nameLabel;
-    private javax.swing.JLabel nameLabel1;
-    private javax.swing.JLabel nameLabel2;
-    private javax.swing.JLabel nameLabel3;
+    private javax.swing.JTextField salaryArea;
+    private javax.swing.JLabel salaryLabel;
+    private javax.swing.JTextField technicianCode;
+    private javax.swing.JTextField technicianName;
     // End of variables declaration//GEN-END:variables
 }

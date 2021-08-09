@@ -1,6 +1,9 @@
 package src.view.cli;
 
+import java.util.Random;
+
 import src.controller.Controller;
+import src.model.Permanent;
 
 public class Main {
     public static void main(String args[]) {
@@ -62,7 +65,7 @@ public class Main {
         // area = "Humanas";
         // else
         // area = "Saúde";
-        // employee[i] = new Permanent(Integer.toString(i + 1), "Fátima", s, nivel,
+        // c.addPermanent("Matematica", Integer.toString(i + 1), "Fátima", s, nivel,
         // degree, area);
         // } else if (f == 1) {
         // double s = rand.nextDouble() > 0.7 ? 4000.0 : 3000.0;
@@ -83,8 +86,8 @@ public class Main {
         // else
         // degree = "Saúde";
         // int workload = rand.nextDouble() > 0.5 ? 12 : 24;
-        // employee[i] = new Substitute(Integer.toString(i + 1), "Cleiton", s, nivel,
-        // degree, workload);
+        // c.addSubstitute("Sapo", Integer.toString(i + 1), "Cleiton", s, nivel, degree,
+        // workload);
         // } else {
         // double s = rand.nextDouble() > 0.7 ? 3000.0 : 2000.0;
         // int t = rand.nextInt(2);
@@ -101,11 +104,12 @@ public class Main {
         // funcao = "Laboratório";
         // } else
         // funcao = "Secretário";
-        // employee[i] = new Technician(Integer.toString(i + 1), "Jackson", s, nivel,
-        // funcao);
+        // c.addTechnician("Mat", Integer.toString(i + 1), "Jackson", s, nivel, funcao);
         // }
-        // }
-        // for (int i = 0; i < MAX; i++) {
+        // }for(
+
+        // int i = 0;i<MAX;i++)
+        // {
         // if (employee[i] instanceof Technician) {
         // Technician e = (Technician) employee[i];
         // System.out.println(e.getId() + " " + e.getName() + " " + e.calculateSalary()

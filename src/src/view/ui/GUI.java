@@ -1,16 +1,20 @@
 package src.view.ui;
 
+import java.util.Random;
+
 import src.controller.Controller;
 import view.ui.addDepartment;
 
 public class GUI extends javax.swing.JFrame {
-        private static Controller c = new Controller();
-        
-        public GUI() {
-                initComponents();
-        }
-        @SuppressWarnings("unchecked")
-        // <editor-fold defaultstate="collapsed" desc="Generated
+    private static Controller c = new Controller();
+
+    public GUI() {
+        initComponents();
+    }
+
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -134,10 +138,20 @@ public class GUI extends javax.swing.JFrame {
 
         addEffective.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
         addEffective.setText("Efetivo");
+        addEffective.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addEffectiveActionPerformed(evt);
+            }
+        });
         addProfessor.add(addEffective);
 
         addSubstitute.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
         addSubstitute.setText("Substituto");
+        addSubstitute.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addSubstituteActionPerformed(evt);
+            }
+        });
         addProfessor.add(addSubstitute);
 
         addEmployee.add(addProfessor);
@@ -199,6 +213,11 @@ public class GUI extends javax.swing.JFrame {
 
         generalReport.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
         generalReport.setText("Geral");
+        generalReport.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                generalReportActionPerformed(evt);
+            }
+        });
         reportMenu.add(generalReport);
 
         departmentReport.setText("Departamentos");
@@ -297,41 +316,139 @@ public class GUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-        private void addDepartmentActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_addDepartmentActionPerformed
-            // TODO add your handling code here:
-            java.awt.EventQueue.invokeLater(new Runnable() {
-                public void run() {
-                    new addDepartment(c).setVisible(true);
-                }
-            });
-        }// GEN-LAST:event_addDepartmentActionPerformed
+    private void addEffectiveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addEffectiveActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new addPermanent(c).setVisible(true);
+            }
+        });
+    }//GEN-LAST:event_addEffectiveActionPerformed
 
-        private void addTechnicianActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_addTechnicianActionPerformed
-            java.awt.EventQueue.invokeLater(new Runnable() {
-                public void run() {
-                    new addTechnician(c).setVisible(true);
-                }
-            });
-        }
+    private void generalReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generalReportActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new generalReport(c).setVisible(true);
+            }
+        });
+    }//GEN-LAST:event_generalReportActionPerformed
 
-        private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton1ActionPerformed
-        }
+    private void addSubstituteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_addSubstituteActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new addSubstitute(c).setVisible(true);
+            }
+        });
+    }// GEN-LAST:event_addSubstituteActionPerformed
 
-        public static void main(String args[]) {
-            c.addDepartment("Mat");
-            c.addDepartment("Fis");
-            c.addDepartment("Sapo");
-            c.addDepartment("Matematica");
-            c.addTechnician("Matematica", "1", "Carlos", 3000, "T1", "Vendedor");
-            c.addTechnician("Sapo", "1", "Carlo3s", 3000, "T1", "Vendedor");
-            c.addTechnician("Ventilador", "1", "C2arlos", 3000, "T1", "Vendedor");
-            c.addTechnician("Mat", "1", "Car2los", 3000, "T1", "Vendedor");
-            java.awt.EventQueue.invokeLater(new Runnable() {
-                    public void run() {
-                            new GUI().setVisible(true);
-                    }
-            });
+    private void addDepartmentActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_addDepartmentActionPerformed
+        // TODO add your handling code here:
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new addDepartment(c).setVisible(true);
+            }
+        });
+    }// GEN-LAST:event_addDepartmentActionPerformed
+
+    private void addTechnicianActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_addTechnicianActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new addTechnician(c).setVisible(true);
+            }
+        });
+    }
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jButton1ActionPerformed
+    }
+
+    public static void main(String args[]) {
+        c.addDepartment("Dep. do Jackson");
+        c.addDepartment("Dep. do Cleiton");
+        c.addDepartment("Dep. da Fátima");
+        int MAX = 20;
+        Random rand = new Random();
+        for (int i = 0; i < MAX; i++) {
+            int f = rand.nextInt(3);
+            if (f == 0) {
+                double s = rand.nextDouble() > 0.7 ? 7000.0 : 6000.0;
+                int t = rand.nextInt(3);
+                String nivel;
+                if (t == 1)
+                    nivel = "T1";
+                else if (t == 2)
+                    nivel = "T2";
+                else
+                    nivel = "T3";
+                int u = rand.nextInt(5);
+                String degree;
+                if (u == 0)
+                    degree = "Graduação";
+                else if (u == 1)
+                    degree = "Doutorado";
+                else if (u == 2)
+                    degree = "Titular";
+                else if (u == 3)
+                    degree = "Mestrado";
+                else if (u == 4)
+                    degree = "Livre-Docente";
+                else
+                    degree = "Titular";
+
+                int v = rand.nextInt(4);
+                String area;
+                if (v == 0)
+                    area = "Biológicas";
+                else if (v == 1)
+                    area = "Exatas";
+                else if (v == 2)
+                    area = "Humanas";
+                else
+                    area = "Saúde";
+                c.addPermanent("Dep. da Fátima", Integer.toString(i + 1), "Fátima", s, nivel, degree, area);
+            } else if (f == 1) {
+                double s = rand.nextDouble() > 0.7 ? 4000.0 : 3000.0;
+                int t = rand.nextInt(2);
+                String nivel;
+                if (t == 1)
+                    nivel = "S1";
+                else
+                    nivel = "S2";
+                int u = rand.nextInt(4);
+                String degree;
+                if (u == 0) {
+                    degree = "Livre-Docente";
+                } else if (u == 1) {
+                    degree = "Mestrado";
+                } else if (u == 2)
+                    degree = "Titular";
+                else
+                    degree = "Saúde";
+                int workload = rand.nextDouble() > 0.5 ? 12 : 24;
+                c.addSubstitute("Dep. do Cleiton", Integer.toString(i + 1), "Cleiton", s, nivel, degree, workload);
+            } else {
+                double s = rand.nextDouble() > 0.7 ? 3000.0 : 2000.0;
+                int t = rand.nextInt(2);
+                String nivel;
+                if (t == 1)
+                    nivel = "T1";
+                else
+                    nivel = "T2";
+                int u = rand.nextInt(3);
+                String funcao;
+                if (u == 0) {
+                    funcao = "Assessor";
+                } else if (u == 1) {
+                    funcao = "Laboratório";
+                } else
+                    funcao = "Secretário";
+                c.addTechnician("Dep. do Jackson", Integer.toString(i + 1), "Jackson", s, nivel, funcao);
+            }
         }
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new GUI().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar Menu;

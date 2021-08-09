@@ -45,12 +45,12 @@ public class Controller {
         university.addSubstitute(department, id, name, salary, level, degree, workLoad);
     }
 
-    public void printDepartments() {
-        university.printDepartments();
+    public String getDepartments() {
+        return university.getDepartments();
     }
 
-    public void printGeneralReport() {
-        university.generalReport();
+    public String getGeneralReport() {
+        return university.generalReport();
     }
 
     public Employee searchEmployeeByName(String name) {
@@ -95,5 +95,9 @@ public class Controller {
 
     public Department search(String name) {
         return university.search(name);
+    }
+
+    public String[] getAllDepartmentsName() {
+        return university.getAllDepartmentsName();
     }
 }

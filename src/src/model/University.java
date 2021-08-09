@@ -55,9 +55,11 @@ public class University {
         return r;
     }
 
-    public void printDepartments() {
+    public String getDepartments() {
+        String all = "";
         for (int i = 0; i < count; i++)
-            System.out.println("Code: " + this.departments[i].getCode() + " Name: " + this.departments[i].getName());
+            all += "Code: " + this.departments[i].getCode() + " Name: " + this.departments[i].getName();
+        return all;
     }
 
     public String departmentReportByCost(double min, double max) {
@@ -71,14 +73,21 @@ public class University {
 
     public String getAllEmployes() {
         String all = "";
-        for (int i = 0; i < count; i++) {
+        for (int i = 0; i < count; i++)
             all += departments[i].getAllEmployees();
-        }
+        return all;
+    }
+
+    public String[] getAllDepartmentsName() {
+        String all[] = new String[count];
+        for (int i = 0; i < count; i++)
+            all[i] = departments[i].getName();
         return all;
     }
 
     public void addTechnician(String department, String id, String name, double salary, String level, String function) {
         Employee e = new Technician(id, name, salary, level, function);
+
         addEmployeeToDepartment(department, e);
     }
 
@@ -98,6 +107,7 @@ public class University {
         Department dptm = searchDepartmentByName(d);
         if (dptm != null) {
             totalEmployees++;
+            System.out.println(totalEmployees);
             dptm.addEmployee(e);
         }
     }
@@ -163,12 +173,12 @@ public class University {
         return all;
     }
 
-    public void generalReport() {
+    public String generalReport() {
         String all = "";
         for (int i = 0; i < count; i++) {
-            all = departments[i].report() + "\n" + departments[i].getAllEmployees();
-            System.out.println(all);
+            all += departments[i].report() + "\n" + departments[i].getAllEmployees() + "\n";
         }
+        return all;
     }
 
     public String getName() {
