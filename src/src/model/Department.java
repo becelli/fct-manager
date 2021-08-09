@@ -1,6 +1,6 @@
 package src.model;
 
-public class Department {
+public class Department implements Cloneable {
     private String code;
     private String name;
     private Employee employees[];
@@ -139,5 +139,9 @@ public class Department {
 
     public int getCount() {
         return count;
+    }
+
+    public Department clone() throws CloneNotSupportedException {
+        return (Department) super.clone();
     }
 }

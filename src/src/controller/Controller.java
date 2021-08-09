@@ -11,6 +11,14 @@ public class Controller {
         university.addDepartment(name);
     }
 
+    public int getNewDepartmentCode() {
+        return university.getCount();
+    }
+
+    public int getTotalEmployees() {
+        return university.getTotalEmployees();
+    }
+
     public Department searchDepartmentByName(String name) {
         return university.searchDepartmentByName(name);
     }
@@ -83,5 +91,9 @@ public class Controller {
 
     public String getAllEmployees() {
         return university.getAllEmployes();
+    }
+
+    public Department search(String name) {
+        return university.search(name);
     }
 }

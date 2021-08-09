@@ -1,10 +1,14 @@
 package src.model;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class University {
     private String name;
     private Department[] departments;
     private int max = 100;
     private int count = 0;
+    private int totalEmployees = 0;
 
     public University() {
         this.name = "";
@@ -18,8 +22,8 @@ public class University {
 
     public void addDepartment(String name) {
         if (count < max) {
-            this.departments[count] = new Department(Integer.toString(count + 1), name);
-            this.count++;
+            departments[count] = new Department(Integer.toString(count + 1), name);
+            count++;
         }
     }
 
@@ -93,6 +97,7 @@ public class University {
     public void addEmployeeToDepartment(String d, Employee e) {
         Department dptm = searchDepartmentByName(d);
         if (dptm != null) {
+            totalEmployees++;
             dptm.addEmployee(e);
         }
     }
@@ -172,5 +177,25 @@ public class University {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public int getTotalEmployees() {
+        return totalEmployees;
+    }
+
+    public Department search(String name) {
+        Department d = searchDepartmentByName(name);
+        if (d != null) {
+            try {
+                return d.clone();
+            } catch (CloneNotSupportedException ex) {
+                Logger.getLogger(University.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        return null;
     }
 }
