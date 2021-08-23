@@ -2,10 +2,10 @@ package src.view.ui;
 
 import src.controller.Controller;
 
-public class removeEmployee extends javax.swing.JFrame {
+public class removeDepartment extends javax.swing.JFrame {
         private Controller c;
 
-        public removeEmployee(Controller c) {
+        public removeDepartment(Controller c) {
                 this.c = c;
                 initComponents();
         }
@@ -31,7 +31,7 @@ public class removeEmployee extends javax.swing.JFrame {
 
         Title.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
         Title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Title.setText("Remover funcionário");
+        Title.setText("Remover departamento");
         Title.setPreferredSize(new java.awt.Dimension(360, 36));
 
         cancelButton.setText("Cancelar");
@@ -101,9 +101,9 @@ public class removeEmployee extends javax.swing.JFrame {
     private void removeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeButtonActionPerformed
         String a = combobox.getSelectedItem().toString();
         if(a == "Código")
-            c.removeEmployeeById(field.getText());
+            c.removeDepartmentByCode(field.getText());
         else
-            c.removeEmployeeByName(field.getText());
+            c.removeDepartmentByName(field.getText());
         this.dispose();
     }//GEN-LAST:event_removeButtonActionPerformed
         private void cancelButtonActionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,16 +121,16 @@ public class removeEmployee extends javax.swing.JFrame {
                                 }
                         }
                 } catch (ClassNotFoundException ex) {
-                        java.util.logging.Logger.getLogger(removeEmployee.class.getName())
+                        java.util.logging.Logger.getLogger(removeDepartment.class.getName())
                                         .log(java.util.logging.Level.SEVERE, null, ex);
                 } catch (InstantiationException ex) {
-                        java.util.logging.Logger.getLogger(removeEmployee.class.getName())
+                        java.util.logging.Logger.getLogger(removeDepartment.class.getName())
                                         .log(java.util.logging.Level.SEVERE, null, ex);
                 } catch (IllegalAccessException ex) {
-                        java.util.logging.Logger.getLogger(removeEmployee.class.getName())
+                        java.util.logging.Logger.getLogger(removeDepartment.class.getName())
                                         .log(java.util.logging.Level.SEVERE, null, ex);
                 } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-                        java.util.logging.Logger.getLogger(removeEmployee.class.getName())
+                        java.util.logging.Logger.getLogger(removeDepartment.class.getName())
                                         .log(java.util.logging.Level.SEVERE, null, ex);
                 }
         }

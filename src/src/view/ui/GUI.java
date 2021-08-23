@@ -165,6 +165,11 @@ public class GUI extends javax.swing.JFrame {
 
         removeDepartment.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
         removeDepartment.setText("Departamento");
+        removeDepartment.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeDepartmentActionPerformed(evt);
+            }
+        });
         removeMenu.add(removeDepartment);
 
         removeEmployee.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
@@ -272,7 +277,7 @@ public class GUI extends javax.swing.JFrame {
         employeeReport.add(professorReport);
 
         effectiveReport.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
-        effectiveReport.setText("Docentes efeitvos");
+        effectiveReport.setText("Docentes efetivos");
         employeeReport.add(effectiveReport);
 
         substituteReport.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
@@ -371,6 +376,14 @@ public class GUI extends javax.swing.JFrame {
         }); 
     }//GEN-LAST:event_removeEmployeeActionPerformed
 
+    private void removeDepartmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeDepartmentActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new removeDepartment(c).setVisible(true);
+            }
+        });
+    }//GEN-LAST:event_removeDepartmentActionPerformed
+
     private void addSubstituteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_addSubstituteActionPerformed
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -400,9 +413,9 @@ public class GUI extends javax.swing.JFrame {
     }
 
     public static void main(String args[]) {
-        c.addDepartment("Dep. do Jackson");
-        c.addDepartment("Dep. do Cleiton");
-        c.addDepartment("Dep. da Fátima");
+        c.addDepartment("Sapo");
+        c.addDepartment("Fatiminha");
+        c.addDepartment("Vento");
         int MAX = 20;
         Random rand = new Random();
         for (int i = 0; i < MAX; i++) {
@@ -442,7 +455,7 @@ public class GUI extends javax.swing.JFrame {
                     area = "Humanas";
                 else
                     area = "Saúde";
-                c.addPermanent("Dep. da Fátima", Integer.toString(i + 1), "Fátima", s, nivel, degree, area);
+                c.addPermanent("Vento", Integer.toString(i + 1), "Fátima", s, nivel, degree, area);
             } else if (f == 1) {
                 double s = rand.nextDouble() > 0.7 ? 4000.0 : 3000.0;
                 int t = rand.nextInt(2);
@@ -462,7 +475,7 @@ public class GUI extends javax.swing.JFrame {
                 else
                     degree = "Saúde";
                 int workload = rand.nextDouble() > 0.5 ? 12 : 24;
-                c.addSubstitute("Dep. do Cleiton", Integer.toString(i + 1), "Cleiton", s, nivel, degree, workload);
+                c.addSubstitute("Sapo", Integer.toString(i + 1), "Cleiton", s, nivel, degree, workload);
             } else {
                 double s = rand.nextDouble() > 0.7 ? 3000.0 : 2000.0;
                 int t = rand.nextInt(2);
@@ -479,7 +492,7 @@ public class GUI extends javax.swing.JFrame {
                     funcao = "Laboratório";
                 } else
                     funcao = "Secretário";
-                c.addTechnician("Dep. do Jackson", Integer.toString(i + 1), "Jackson", s, nivel, funcao);
+                c.addTechnician("Fatiminha", Integer.toString(i + 1), "Jackson", s, nivel, funcao);
             }
         }
         java.awt.EventQueue.invokeLater(new Runnable() {
