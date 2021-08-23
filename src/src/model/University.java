@@ -99,7 +99,6 @@ public class University {
 
     public void addTechnician(String department, String id, String name, double salary, String level, String function) {
         Employee e = new Technician(id, name, salary, level, function);
-
         addEmployeeToDepartment(department, e);
     }
 
@@ -119,8 +118,23 @@ public class University {
         Department dptm = searchDepartmentByName(d);
         if (dptm != null) {
             totalEmployees++;
-            System.out.println(totalEmployees);
             dptm.addEmployee(e);
+        }
+    }
+
+    public void removeEmployeeById(String id) {
+        Employee e = (Employee) searchEmployeeById(id);
+        if (e != null) {
+            e.setLevel("");
+            e.setName("");
+            e.setSalary(0);
+        }
+    }
+
+    public void removeEmployeeByName(String name) {
+        Employee e = searchEmployeeByName(name);
+        if (e != null) {
+            e = null; // TODO is this right?
         }
     }
 

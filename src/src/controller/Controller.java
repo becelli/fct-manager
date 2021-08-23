@@ -48,7 +48,15 @@ public class Controller {
             int workLoad) {
         university.addSubstitute(department, id, name, salary, level, degree, workLoad);
     }
-
+    
+    public void removeEmployeeByName(String name) {
+        university.removeEmployeeByName(name);
+    }
+    
+    public void removeEmployeeById(String id) {
+        university.removeEmployeeById(id);
+    }
+    
     public String getDepartments() {
         return university.getDepartments();
     }
@@ -108,4 +116,5 @@ public class Controller {
     public String[] getAllDepartmentsCode() {
         return university.getAllDepartmentsCode();
     }
+    
 }

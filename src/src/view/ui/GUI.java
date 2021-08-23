@@ -169,6 +169,11 @@ public class GUI extends javax.swing.JFrame {
 
         removeEmployee.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
         removeEmployee.setText("Funcionário");
+        removeEmployee.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeEmployeeActionPerformed(evt);
+            }
+        });
         removeMenu.add(removeEmployee);
 
         Menu.add(removeMenu);
@@ -357,6 +362,14 @@ public class GUI extends javax.swing.JFrame {
             }
         });
     }//GEN-LAST:event_searchDepartmentByNameActionPerformed
+
+    private void removeEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeEmployeeActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new removeEmployee(c).setVisible(true);
+            }
+        }); 
+    }//GEN-LAST:event_removeEmployeeActionPerformed
 
     private void addSubstituteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_addSubstituteActionPerformed
         java.awt.EventQueue.invokeLater(new Runnable() {

@@ -21,6 +21,13 @@ public class Department implements Cloneable {
         }
     }
 
+    public void removeEmployee(String id) {
+        Employee e = searchEmployeeById(id);
+        if (e != null) {
+            e = null;
+        }
+    }
+
     public Employee searchEmployeeById(String id) {
         for (int i = 0; i < count; i++)
             if (employees[i].getId().equals(id))
@@ -110,7 +117,8 @@ public class Department implements Cloneable {
         String all = "";
         for (int i = 0; i < count; i++) {
             Employee e = employees[i];
-            all += getEmployeeInfo(e) + "\n";
+            if (e != null)
+                all += getEmployeeInfo(e) + "\n";
         }
         return all;
     }
