@@ -245,6 +245,11 @@ public class GUI extends javax.swing.JFrame {
 
         departmentGeneralReport.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
         departmentGeneralReport.setText("Resumo geral");
+        departmentGeneralReport.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                departmentGeneralReportActionPerformed(evt);
+            }
+        });
         departmentReport.add(departmentGeneralReport);
 
         departmentSalaryReport.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
@@ -262,26 +267,56 @@ public class GUI extends javax.swing.JFrame {
 
         employeeGeneralReport.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
         employeeGeneralReport.setText("Todos os funcionários");
+        employeeGeneralReport.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                employeeGeneralReportActionPerformed(evt);
+            }
+        });
         employeeReport.add(employeeGeneralReport);
 
         employeeBySalarylReport.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
         employeeBySalarylReport.setText("Resumo por faixa salarial");
+        employeeBySalarylReport.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                employeeBySalarylReportActionPerformed(evt);
+            }
+        });
         employeeReport.add(employeeBySalarylReport);
 
         technicianReport.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
         technicianReport.setText("Técnicos");
+        technicianReport.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                technicianReportActionPerformed(evt);
+            }
+        });
         employeeReport.add(technicianReport);
 
         professorReport.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
         professorReport.setText("Docentes");
+        professorReport.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                professorReportActionPerformed(evt);
+            }
+        });
         employeeReport.add(professorReport);
 
         effectiveReport.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
         effectiveReport.setText("Docentes efetivos");
+        effectiveReport.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                effectiveReportActionPerformed(evt);
+            }
+        });
         employeeReport.add(effectiveReport);
 
         substituteReport.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
         substituteReport.setText("Docentes substitutos");
+        substituteReport.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                substituteReportActionPerformed(evt);
+            }
+        });
         employeeReport.add(substituteReport);
 
         reportMenu.add(employeeReport);
@@ -384,6 +419,62 @@ public class GUI extends javax.swing.JFrame {
         });
     }//GEN-LAST:event_removeDepartmentActionPerformed
 
+    private void departmentGeneralReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_departmentGeneralReportActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {            
+            public void run() {
+                new departmentGeneralReport(c).setVisible(true);
+            }
+        });
+    }//GEN-LAST:event_departmentGeneralReportActionPerformed
+
+    private void substituteReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_substituteReportActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {            
+            public void run() {
+                new substituteReport(c).setVisible(true);
+            }
+        });
+    }//GEN-LAST:event_substituteReportActionPerformed
+
+    private void effectiveReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_effectiveReportActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {            
+            public void run() {
+                new permanentReport(c).setVisible(true);
+            }
+        });
+    }//GEN-LAST:event_effectiveReportActionPerformed
+
+    private void professorReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_professorReportActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {            
+            public void run() {
+                new professorReport(c).setVisible(true);
+            }
+        });
+    }//GEN-LAST:event_professorReportActionPerformed
+
+    private void technicianReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_technicianReportActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {            
+            public void run() {
+                new technicianReport(c).setVisible(true);
+            }
+        });
+    }//GEN-LAST:event_technicianReportActionPerformed
+
+    private void employeeGeneralReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_employeeGeneralReportActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {            
+            public void run() {
+                new allEmployees(c).setVisible(true);
+            }
+        });
+    }//GEN-LAST:event_employeeGeneralReportActionPerformed
+
+    private void employeeBySalarylReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_employeeBySalarylReportActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {            
+            public void run() {
+                new employeesBySalaryReport(c).setVisible(true);
+            }
+        });
+    }//GEN-LAST:event_employeeBySalarylReportActionPerformed
+
     private void addSubstituteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_addSubstituteActionPerformed
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -425,11 +516,11 @@ public class GUI extends javax.swing.JFrame {
                 int t = rand.nextInt(3);
                 String nivel;
                 if (t == 1)
-                    nivel = "T1";
+                    nivel = "D1";
                 else if (t == 2)
-                    nivel = "T2";
+                    nivel = "D2";
                 else
-                    nivel = "T3";
+                    nivel = "D3";
                 int u = rand.nextInt(5);
                 String degree;
                 if (u == 0)
