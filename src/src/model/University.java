@@ -3,7 +3,7 @@ package src.model;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.graalvm.compiler.phases.common.DeadCodeEliminationPhase;
+// import org.graalvm.compiler.phases.common.DeadCodeEliminationPhase;
 
 public class University {
     private String name;
@@ -61,7 +61,7 @@ public class University {
         String r = "";
         for (int i = 0; i < count; i++)
             if (departments[i] != null)
-                r += departments[i].report() + "\n\n";
+                r += departments[i].report() + "\n";
         return r;
     }
 
@@ -77,8 +77,8 @@ public class University {
         String d = "";
         for (int i = 0; i < count; i++) {
             if (departments[i] != null)
-                if (departments[i].totalCost() > min && departments[i].totalCost() < max)
-                    d += departments[i].report();
+                if (departments[i].totalCost() >= min && departments[i].totalCost() <= max)
+                    d += departments[i].report() + "\n";
         }
         return d;
     }
@@ -93,18 +93,36 @@ public class University {
 
     public String[] getAllDepartmentsName() {
         String all[] = new String[count];
+        int nil = 0;
         for (int i = 0; i < count; i++)
             if (departments[i] != null)
                 all[i] = departments[i].getName();
-        return all;
+            else
+                nil += 1;
+        String[] f = new String[count - nil];
+        int j = 0;
+        for (int i = 0; i < count; i++) {
+            if (all[i] != null)
+                f[j++] = all[i];
+        }
+        return f;
     }
 
     public String[] getAllDepartmentsCode() {
         String all[] = new String[count];
+        int nil = 0;
         for (int i = 0; i < count; i++)
             if (departments[i] != null)
                 all[i] = departments[i].getCode();
-        return all;
+            else
+                nil += 1;
+        String[] f = new String[count - nil];
+        int j = 0;
+        for (int i = 0; i < count; i++) {
+            if (all[i] != null)
+                f[j++] = all[i];
+        }
+        return f;
     }
 
     public void addTechnician(String department, String id, String name, double salary, String level, String function) {
@@ -167,24 +185,32 @@ public class University {
         }
     }
 
-    public Employee searchEmployeeByName(String name) {
+    public String searchEmployeeByName(String name) {
         Employee e;
+        String r = "Não encontrado";
         for (int i = 0; i < count; i++) {
-            e = departments[i].searchEmployeeByName(name);
-            if (e != null)
-                return e;
+            int totalEmployees = departments[i].getCount();
+            for (int j = 0; j < totalEmployees; j++) {
+                e = departments[i].searchEmployeeByName(j, name);
+                if (e != null) {
+                    if (r.equals("Não encontrado"))
+                        r = departments[i].getEmployeeInfo(e) + "\n";
+                    else
+                        r += departments[i].getEmployeeInfo(e) + "\n";
+                }
+            }
         }
-        return null;
+        return r;
     }
 
-    public Employee searchEmployeeById(String id) {
+    public String searchEmployeeById(String id) {
         Employee e;
         for (int i = 0; i < count; i++) {
             e = departments[i].searchEmployeeById(id);
             if (e != null)
-                return e;
+                return departments[i].getEmployeeInfo(e) + "\n";
         }
-        return null;
+        return "Não encontrado";
     }
 
     public String employeeReportByCost(double min, double max) {
@@ -193,13 +219,14 @@ public class University {
             if (departments[i] != null) {
                 int f = departments[i].getCount();
                 for (int j = 0; j < f; j++) {
-                    Employee e = departments[j].searchEmployeeByCost(min, max);
+                    Employee e = departments[i].searchEmployeeByCost(j, min, max);
                     if (e != null)
-                        all += departments[j].getEmployeeInfo(e) + "\n";
+                        all += departments[i].getEmployeeInfo(e) + "\n";
                 }
             }
         }
         return all;
+
     }
 
     public String technicianReport() {

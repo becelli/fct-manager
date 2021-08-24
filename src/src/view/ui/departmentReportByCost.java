@@ -11,13 +11,13 @@ import src.controller.Controller;
  *
  * @author becelli
  */
-public class employeesBySalaryReport extends javax.swing.JFrame {
+public class departmentReportByCost extends javax.swing.JFrame {
     private Controller c;
 
     /**
      * Creates new form generalReportWindow
      */
-    public employeesBySalaryReport(Controller c) {
+    public departmentReportByCost(Controller c) {
         this.c = c;
         initComponents();
     }
@@ -69,7 +69,7 @@ public class employeesBySalaryReport extends javax.swing.JFrame {
 
         Title.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
         Title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Title.setText("Buscar funcionários por faixa salarial");
+        Title.setText("Resumo de departamentos por gasto total");
         Title.setPreferredSize(new java.awt.Dimension(360, 36));
 
         jLabel1.setText("De:");
@@ -93,11 +93,11 @@ public class employeesBySalaryReport extends javax.swing.JFrame {
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(outputTextScroll, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(Title, javax.swing.GroupLayout.DEFAULT_SIZE, 402, Short.MAX_VALUE)))
+                            .addComponent(Title, javax.swing.GroupLayout.DEFAULT_SIZE, 457, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(153, 153, 153)
                         .addComponent(closeButton)
-                        .addGap(0, 182, Short.MAX_VALUE))
+                        .addGap(0, 237, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel1)
@@ -134,7 +134,7 @@ public class employeesBySalaryReport extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
-        outputText.setText(c.employeeReportByCost(Double.parseDouble(min.getText()), Double.parseDouble(max.getText())));
+        outputText.setText(c.departmentReportByCost(Double.parseDouble(min.getText()), Double.parseDouble(max.getText())));
     }//GEN-LAST:event_searchButtonActionPerformed
 
     private void dptmCodeActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_dptmCodeActionPerformed
@@ -165,18 +165,114 @@ public class employeesBySalaryReport extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(employeesBySalaryReport.class.getName())
+            java.util.logging.Logger.getLogger(departmentReportByCost.class.getName())
                     .log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(employeesBySalaryReport.class.getName())
+            java.util.logging.Logger.getLogger(departmentReportByCost.class.getName())
                     .log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(employeesBySalaryReport.class.getName())
+            java.util.logging.Logger.getLogger(departmentReportByCost.class.getName())
                     .log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(employeesBySalaryReport.class.getName())
+            java.util.logging.Logger.getLogger(departmentReportByCost.class.getName())
                     .log(java.util.logging.Level.SEVERE, null, ex);
         }
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
+        // </editor-fold>
         // </editor-fold>
         // </editor-fold>
         // </editor-fold>

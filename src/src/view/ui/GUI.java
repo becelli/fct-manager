@@ -48,8 +48,8 @@ public class GUI extends javax.swing.JFrame {
         generalReport = new javax.swing.JMenuItem();
         departmentReport = new javax.swing.JMenu();
         departmentGeneralReport = new javax.swing.JMenuItem();
-        departmentSalaryReport = new javax.swing.JMenuItem();
         departmentGeneralInfo = new javax.swing.JMenuItem();
+        departmentSalaryReport = new javax.swing.JMenuItem();
         employeeReport = new javax.swing.JMenu();
         employeeGeneralReport = new javax.swing.JMenuItem();
         employeeBySalarylReport = new javax.swing.JMenuItem();
@@ -213,15 +213,30 @@ public class GUI extends javax.swing.JFrame {
         searchEmployee.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
 
         searchEmployeeById.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
-        searchEmployeeById.setText("Registro");
+        searchEmployeeById.setText("Código");
+        searchEmployeeById.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchEmployeeByIdActionPerformed(evt);
+            }
+        });
         searchEmployee.add(searchEmployeeById);
 
         searchEmployeeByName.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
         searchEmployeeByName.setText("Nome");
+        searchEmployeeByName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchEmployeeByNameActionPerformed(evt);
+            }
+        });
         searchEmployee.add(searchEmployeeByName);
 
         searchEmployeeBySalary.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
         searchEmployeeBySalary.setText("Faixa Salarial");
+        searchEmployeeBySalary.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchEmployeeBySalaryActionPerformed(evt);
+            }
+        });
         searchEmployee.add(searchEmployeeBySalary);
 
         searchMenu.add(searchEmployee);
@@ -244,7 +259,7 @@ public class GUI extends javax.swing.JFrame {
         departmentReport.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
 
         departmentGeneralReport.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
-        departmentGeneralReport.setText("Resumo geral");
+        departmentGeneralReport.setText("Relatório Geral");
         departmentGeneralReport.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 departmentGeneralReportActionPerformed(evt);
@@ -252,13 +267,23 @@ public class GUI extends javax.swing.JFrame {
         });
         departmentReport.add(departmentGeneralReport);
 
+        departmentGeneralInfo.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
+        departmentGeneralInfo.setText("Resumo do departamento");
+        departmentGeneralInfo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                departmentGeneralInfoActionPerformed(evt);
+            }
+        });
+        departmentReport.add(departmentGeneralInfo);
+
         departmentSalaryReport.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
         departmentSalaryReport.setText("Resumo por faixa salarial");
+        departmentSalaryReport.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                departmentSalaryReportActionPerformed(evt);
+            }
+        });
         departmentReport.add(departmentSalaryReport);
-
-        departmentGeneralInfo.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
-        departmentGeneralInfo.setText("Exibir informações...");
-        departmentReport.add(departmentGeneralInfo);
 
         reportMenu.add(departmentReport);
 
@@ -474,6 +499,46 @@ public class GUI extends javax.swing.JFrame {
             }
         });
     }//GEN-LAST:event_employeeBySalarylReportActionPerformed
+
+    private void departmentSalaryReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_departmentSalaryReportActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new departmentReportByCost(c).setVisible(true);
+            }
+        });
+    }//GEN-LAST:event_departmentSalaryReportActionPerformed
+
+    private void departmentGeneralInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_departmentGeneralInfoActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new departmentReport(c).setVisible(true);
+            }
+        });
+    }//GEN-LAST:event_departmentGeneralInfoActionPerformed
+
+    private void searchEmployeeByIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchEmployeeByIdActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new searchEmployeeById(c).setVisible(true);
+            }
+        });
+    }//GEN-LAST:event_searchEmployeeByIdActionPerformed
+
+    private void searchEmployeeByNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchEmployeeByNameActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new searchEmployeeByName(c).setVisible(true);
+            }
+        });
+    }//GEN-LAST:event_searchEmployeeByNameActionPerformed
+
+    private void searchEmployeeBySalaryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchEmployeeBySalaryActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new employeesBySalaryReport(c).setVisible(true);
+            }
+        });
+    }//GEN-LAST:event_searchEmployeeBySalaryActionPerformed
 
     private void addSubstituteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_addSubstituteActionPerformed
         java.awt.EventQueue.invokeLater(new Runnable() {

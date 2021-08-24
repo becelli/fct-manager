@@ -1,7 +1,6 @@
 package src.controller;
 
 import src.model.Department;
-import src.model.Employee;
 import src.model.University;
 
 public class Controller {
@@ -73,11 +72,11 @@ public class Controller {
         return university.generalReport();
     }
 
-    public Employee searchEmployeeByName(String name) {
+    public String searchEmployeeByName(String name) {
         return university.searchEmployeeByName(name);
     }
 
-    public Employee searchEmployeeById(String id) {
+    public String searchEmployeeById(String id) {
         return university.searchEmployeeById(id);
     }
 

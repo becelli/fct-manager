@@ -44,23 +44,23 @@ public class Department implements Cloneable {
 
     public Employee searchEmployeeById(String id) {
         for (int i = 0; i < count; i++)
-            if (employees[i].getId().equals(id))
-                return employees[i];
+            if (employees[i] != null)
+                if (employees[i].getId().equals(id))
+                    return employees[i];
         return null;
     }
 
-    public Employee searchEmployeeByName(String name) {
-        for (int i = 0; i < count; i++)
-            if (employees[i].getName().equals(name))
-                return employees[i];
+    public Employee searchEmployeeByName(int id, String name) {
+        if(employees[id] != null)
+            return employees[id].getName().equals(name) ? employees[id] : null;
         return null;
     }
 
-    public Employee searchEmployeeByCost(double min, double max) {
-        for (int i = 0; i < count; i++) {
-            double s = employees[i].calculateSalary();
-            if (s > min && s < max)
-                return employees[i];
+    public Employee searchEmployeeByCost(int id, double min, double max) {
+        if (employees[id] != null) {
+            double s = Math.floor(employees[id].calculateSalary() * 100) / 100;
+            if (s >= min - 1 && s <= max)
+                return employees[id];
         }
         return null;
     }
