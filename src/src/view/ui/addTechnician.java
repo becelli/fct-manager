@@ -1,6 +1,7 @@
 package src.view.ui;
 
 import src.controller.Controller;
+import src.model.Constants;
 
 public class addTechnician extends javax.swing.JFrame {
     private Controller c;
@@ -78,7 +79,7 @@ public class addTechnician extends javax.swing.JFrame {
             }
         });
 
-        levelBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "T1", "T2" }));
+        levelBox.setModel(new javax.swing.DefaultComboBoxModel<>(Constants.getTechLevels()));
         levelBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 levelBoxActionPerformed(evt);

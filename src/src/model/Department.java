@@ -5,6 +5,7 @@ public class Department implements Cloneable {
     private String name;
     private Employee employees[];
     private final int MAX = 100;
+    private int ACTIVE = MAX;
     private int count;
 
     public Department(String code, String name) {
@@ -26,6 +27,7 @@ public class Department implements Cloneable {
             if (employees[i] != null)
                 if (employees[i].getId().equals(id)) {
                     employees[i] = null;
+                    ACTIVE--;
                     return true;
                 }
         }
@@ -37,6 +39,7 @@ public class Department implements Cloneable {
             if (employees[i] != null)
                 if (employees[i].getName().equals(name)) {
                     employees[i] = null;
+                    ACTIVE--;
                     return true;
                 }
         return false;
@@ -51,7 +54,7 @@ public class Department implements Cloneable {
     }
 
     public Employee searchEmployeeByName(int id, String name) {
-        if(employees[id] != null)
+        if (employees[id] != null)
             return employees[id].getName().equals(name) ? employees[id] : null;
         return null;
     }
@@ -68,8 +71,9 @@ public class Department implements Cloneable {
     public String searchTechnician() {
         String all = "";
         for (int i = 0; i < count; i++) {
-            if (employees[i] instanceof Technician)
-                all += getEmployeeInfo(employees[i]) + "\n";
+            if (employees[i] != null)
+                if (employees[i] instanceof Technician)
+                    all += getEmployeeInfo(employees[i]) + "\n";
         }
         return all;
     }
@@ -77,8 +81,9 @@ public class Department implements Cloneable {
     public String searchPermanent() {
         String all = "";
         for (int i = 0; i < count; i++) {
-            if (employees[i] instanceof Permanent)
-                all += getEmployeeInfo(employees[i]) + "\n";
+            if (employees[i] != null)
+                if (employees[i] instanceof Permanent)
+                    all += getEmployeeInfo(employees[i]) + "\n";
         }
         return all;
     }
@@ -86,8 +91,9 @@ public class Department implements Cloneable {
     public String searchSubstitute() {
         String all = "";
         for (int i = 0; i < count; i++) {
-            if (employees[i] instanceof Substitute)
-                all += getEmployeeInfo(employees[i]) + "\n";
+            if (employees[i] != null)
+                if (employees[i] instanceof Substitute)
+                    all += getEmployeeInfo(employees[i]) + "\n";
         }
         return all;
     }
@@ -95,8 +101,9 @@ public class Department implements Cloneable {
     public String searchProfessor() {
         String all = "";
         for (int i = 0; i < count; i++) {
-            if (employees[i] instanceof Professor)
-                all += getEmployeeInfo(employees[i]) + "\n";
+            if (employees[i] != null)
+                if (employees[i] instanceof Professor)
+                    all += getEmployeeInfo(employees[i]) + "\n";
         }
         return all;
     }

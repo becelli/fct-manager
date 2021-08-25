@@ -191,12 +191,14 @@ public class University {
         for (int i = 0; i < count; i++) {
             int totalEmployees = departments[i].getCount();
             for (int j = 0; j < totalEmployees; j++) {
-                e = departments[i].searchEmployeeByName(j, name);
-                if (e != null) {
-                    if (r.equals("Não encontrado"))
-                        r = departments[i].getEmployeeInfo(e) + "\n";
-                    else
-                        r += departments[i].getEmployeeInfo(e) + "\n";
+                if(departments[i] != null){
+                    e = departments[i].searchEmployeeByName(j, name);
+                    if (e != null) {
+                        if (r.equals("Não encontrado"))
+                            r = departments[i].getEmployeeInfo(e) + "\n";
+                        else
+                            r += departments[i].getEmployeeInfo(e) + "\n";
+                    }
                 }
             }
         }
@@ -206,9 +208,11 @@ public class University {
     public String searchEmployeeById(String id) {
         Employee e;
         for (int i = 0; i < count; i++) {
-            e = departments[i].searchEmployeeById(id);
-            if (e != null)
-                return departments[i].getEmployeeInfo(e) + "\n";
+            if(departments[i] != null){
+                e = departments[i].searchEmployeeById(id);
+                if (e != null)
+                    return departments[i].getEmployeeInfo(e) + "\n";
+            }
         }
         return "Não encontrado";
     }

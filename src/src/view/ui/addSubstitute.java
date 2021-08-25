@@ -1,6 +1,7 @@
 package src.view.ui;
 
 import src.controller.Controller;
+import src.model.Constants;
 
 public class addSubstitute extends javax.swing.JFrame {
         private Controller c;
@@ -80,7 +81,7 @@ public class addSubstitute extends javax.swing.JFrame {
                         }
                 });
 
-                levelBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "S1", "S2" }));
+                levelBox.setModel(new javax.swing.DefaultComboBoxModel<>(Constants.getSubstituteLevels()));
                 levelBox.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
                                 levelBoxActionPerformed(evt);

@@ -6,6 +6,7 @@ public class Permanent extends Professor {
     public Permanent() {
         super();
         this.area = "";
+        this.level = Constants.getPermanentLevel(1);
     }
 
     public Permanent(String id, String name, double salary, String level, String degree, String area) {
@@ -15,14 +16,9 @@ public class Permanent extends Professor {
 
     @Override
     public double calculateSalary() {
-        double wage = getSalary();
-        if (getLevel().equals("D1"))
-            wage *= 1.05;
-        else if (getLevel().equals("D2"))
-            wage *= 1.1;
-        else
-            wage *= 1.2;
-        return wage + getSalary() * 0.05;
+        double wage = getSalary() * Constants.permAdditional(level);
+        wage += getSalary() * Constants.permExtra();
+        return wage;
     }
 
     public void setArea(String area) {

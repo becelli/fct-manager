@@ -5,7 +5,7 @@ public class Technician extends Employee {
 
     public Technician() {
         super();
-        function = "T1";
+        function = Constants.getTechLevel(1);
     }
 
     public Technician(String id, String name, double salary, String level, String function) {
@@ -15,9 +15,7 @@ public class Technician extends Employee {
 
     @Override
     public double calculateSalary() {
-        if (getLevel().equals("T1"))
-            return getSalary() * 1.1;
-        return getSalary() * 1.2;
+        return getSalary() * Constants.techAdditional(level);
     }
 
     public String getFunction() {

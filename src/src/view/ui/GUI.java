@@ -3,7 +3,6 @@ package src.view.ui;
 import java.util.Random;
 
 import src.controller.Controller;
-import view.ui.addDepartment;
 
 public class GUI extends javax.swing.JFrame {
     private static Controller c = new Controller();
@@ -23,8 +22,9 @@ public class GUI extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        addButton = new javax.swing.JButton();
         jToggleButton1 = new javax.swing.JToggleButton();
+        jLabel5 = new javax.swing.JLabel();
         Menu = new javax.swing.JMenuBar();
         addMenu = new javax.swing.JMenu();
         addDepartment = new javax.swing.JMenuItem();
@@ -75,7 +75,7 @@ public class GUI extends javax.swing.JFrame {
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jLabel1.setOpaque(true);
 
-        jLabel2.setFont(new java.awt.Font("Roboto Light", 1, 36)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
         jLabel2.setText("Cadastro UNESP");
 
         jSeparator1.setForeground(new java.awt.Color(33, 150, 243));
@@ -88,13 +88,13 @@ public class GUI extends javax.swing.JFrame {
         jLabel4.setText("O que você gostaria de fazer?");
         jLabel4.setPreferredSize(new java.awt.Dimension(171, 15));
 
-        jButton1.setBackground(new java.awt.Color(33, 150, 243));
-        jButton1.setFont(new java.awt.Font("Roboto Light", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(240, 240, 240));
-        jButton1.setText("Cadastrar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        addButton.setBackground(new java.awt.Color(33, 150, 243));
+        addButton.setFont(new java.awt.Font("Roboto Light", 1, 18)); // NOI18N
+        addButton.setForeground(new java.awt.Color(240, 240, 240));
+        addButton.setText("Cadastrar");
+        addButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                addButtonActionPerformed(evt);
             }
         });
 
@@ -104,6 +104,13 @@ public class GUI extends javax.swing.JFrame {
         jToggleButton1.setText("Buscar");
         jToggleButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jToggleButton1.setOpaque(true);
+        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jToggleButton1ActionPerformed(evt);
+            }
+        });
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/src/view/ui/Logo_Unesp.png"))); // NOI18N
 
         Menu.setForeground(new java.awt.Color(240, 240, 240));
         Menu.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
@@ -358,25 +365,31 @@ public class GUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(9, 9, 9)
+                        .addComponent(jLabel5)
+                        .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 845, Short.MAX_VALUE)
                             .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.LEADING))
-                        .addContainerGap())))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(58, 58, 58)
-                .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(252, 252, 252))
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(58, 58, 58)
+                        .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(252, 252, 252))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -385,7 +398,7 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(55, 55, 55)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -540,6 +553,22 @@ public class GUI extends javax.swing.JFrame {
         });
     }//GEN-LAST:event_searchEmployeeBySalaryActionPerformed
 
+    private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new addButton(c).setVisible(true);
+            }
+        });
+    }//GEN-LAST:event_addButtonActionPerformed
+
+    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new remove(c).setVisible(true);
+            }
+        });
+    }//GEN-LAST:event_jToggleButton1ActionPerformed
+
     private void addSubstituteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_addSubstituteActionPerformed
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -549,7 +578,7 @@ public class GUI extends javax.swing.JFrame {
     }// GEN-LAST:event_addSubstituteActionPerformed
 
     private void addDepartmentActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_addDepartmentActionPerformed
-        // TODO add your handling code here:
+        // TODO addButton your handling code here:
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new addDepartment(c).setVisible(true);
@@ -660,6 +689,7 @@ public class GUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar Menu;
+    private javax.swing.JButton addButton;
     private javax.swing.JMenuItem addDepartment;
     private javax.swing.JMenuItem addEffective;
     private javax.swing.JMenu addEmployee;
@@ -676,11 +706,11 @@ public class GUI extends javax.swing.JFrame {
     private javax.swing.JMenuItem employeeGeneralReport;
     private javax.swing.JMenu employeeReport;
     private javax.swing.JMenuItem generalReport;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JMenuItem professorReport;

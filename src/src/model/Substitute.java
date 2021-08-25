@@ -6,22 +6,21 @@ public class Substitute extends Professor {
     public Substitute() {
         super();
         workLoad = 0;
+        level = Constants.getSubstituteLevel(1);
     }
 
     public Substitute(String id, String name, double salary, String level, String degree, int workLoad) {
         super(id, name, salary, level, degree);
-        this.workLoad = workLoad;
+        this.workLoad = Constants.validateSubstituteWorkload(workLoad);
     }
 
     @Override
     public double calculateSalary() {
-        if (getLevel().equals("S1"))
-            return getSalary() * 1.05;
-        return getSalary() * 1.1;
+        return getSalary() * Constants.subsAdditional(level);
     }
 
     public void setWorkLoad(int workLoad) {
-        this.workLoad = workLoad;
+        this.workLoad = Constants.validateSubstituteWorkload(workLoad);
     }
 
     public int getWorkLoad() {

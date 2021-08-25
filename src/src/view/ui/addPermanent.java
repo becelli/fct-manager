@@ -1,6 +1,7 @@
 package src.view.ui;
 
 import src.controller.Controller;
+import src.model.Constants;
 
 public class addPermanent extends javax.swing.JFrame {
         private Controller c;
@@ -81,7 +82,7 @@ public class addPermanent extends javax.swing.JFrame {
                         }
                 });
 
-                levelBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "D1", "D2", "D3" }));
+                levelBox.setModel(new javax.swing.DefaultComboBoxModel<>(Constants.getPermanentLevels()));
                 levelBox.addActionListener(new java.awt.event.ActionListener() {
                         public void actionPerformed(java.awt.event.ActionEvent evt) {
                                 levelBoxActionPerformed(evt);
