@@ -364,28 +364,28 @@ public class GUI extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
-                        Short.MAX_EMPLOYEES_VALUE)
+                        Short.MAX_VALUE)
                 .addGroup(layout.createSequentialGroup().addContainerGap().addGroup(layout
                         .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 250,
-                                        Short.MAX_EMPLOYEES_VALUE)
+                                        Short.MAX_VALUE)
                                 .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 150,
                                         javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(75, 75, 75)
                                 .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150,
                                         javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(250, Short.MAX_EMPLOYEES_VALUE))
+                                .addContainerGap(250, Short.MAX_VALUE))
                         .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(layout.createSequentialGroup()
                                                 .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_EMPLOYEES_VALUE)
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                 .addGap(9, 9, 9).addComponent(jLabel5))
                                         .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_EMPLOYEES_VALUE)
+                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_EMPLOYEES_VALUE)
+                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                         .addComponent(jSeparator1))
                                 .addContainerGap()))));
         layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGroup(
@@ -393,9 +393,9 @@ public class GUI extends javax.swing.JFrame {
                 layout.createSequentialGroup().addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_EMPLOYEES_VALUE)
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_EMPLOYEES_VALUE))
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10,
                                 javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -411,8 +411,7 @@ public class GUI extends javax.swing.JFrame {
                                         javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 60,
                                         javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70,
-                                Short.MAX_EMPLOYEES_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 80,
                                 javax.swing.GroupLayout.PREFERRED_SIZE)));
 
@@ -612,12 +611,12 @@ public class GUI extends javax.swing.JFrame {
 
     public static void main(String args[]) {
         Random rand = new Random();
-        int MAX_EMPLOYEES = 20;
-        // CREATE THE DEPARTMENTS
+        int MAX_EMPLOYEES = 25;
+        // CONSTANTS
         String[] professorDegree = new String[] { "Graduação", "Doutorado", "Titular", "Mestrado", "Livre-Docente",
                 "Titular" };
 
-        String[] dpName = new String[] { "Computação", "Física", "Estatística" };
+        String[] dpName = new String[] { "Computação", "Física", "Estatística", "Psicologia", "Educação Física" };
         String[] permanentLevel = new String[] { "D1", "D2", "D3" };
         String[] permanentArea = new String[] { "Biológicas", "Exatas", "Humanas", "Saúde" };
 
@@ -664,7 +663,7 @@ public class GUI extends javax.swing.JFrame {
 
                     c.addSubstitute(department, id, name, salary, level, degree, workload);
                     break;
-                case 2: // TECHNICIAN
+                default: // TECHNICIAN
                     level = technicianLevel[rand.nextInt(technicianLevel.length)];
                     String function = technicianFunction[rand.nextInt(technicianFunction.length)];
                     c.addTechnician(department, id, name, salary, level, function);
