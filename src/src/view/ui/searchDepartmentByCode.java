@@ -34,6 +34,7 @@ public class searchDepartmentByCode extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
     // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -115,6 +116,7 @@ public class searchDepartmentByCode extends javax.swing.JFrame {
                 .addContainerGap()));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void dptmCodeActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_dptmCodeActionPerformed

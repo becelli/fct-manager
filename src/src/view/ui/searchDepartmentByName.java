@@ -36,6 +36,7 @@ public class searchDepartmentByName extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
     // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -70,11 +71,6 @@ public class searchDepartmentByName extends javax.swing.JFrame {
         jLabel1.setText("Nome do departamento:");
 
         dptmName.setModel(new javax.swing.DefaultComboBoxModel<>(c.getAllDepartmentsName()));
-        // dptmName.addActionListener(new java.awt.event.ActionListener() {
-        // public void actionPerformed(java.awt.event.ActionEvent evt) {
-        // dptmNameActionPerformed(evt);
-        // }
-        // });
 
         searchButton.setText("Buscar");
         searchButton.addActionListener(new java.awt.event.ActionListener() {
@@ -121,6 +117,7 @@ public class searchDepartmentByName extends javax.swing.JFrame {
                 .addContainerGap()));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void dptmCodeActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_dptmCodeActionPerformed

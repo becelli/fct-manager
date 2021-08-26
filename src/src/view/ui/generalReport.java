@@ -31,6 +31,7 @@ public class generalReport extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
     // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -46,7 +47,7 @@ public class generalReport extends javax.swing.JFrame {
         outputText.setColumns(20);
         outputText.setRows(5);
         outputTextScroll.setViewportView(outputText);
-
+        outputText.setText(c.getGeneralReport());
         closeButton.setText("Fechar");
         closeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,8 +59,7 @@ public class generalReport extends javax.swing.JFrame {
         Title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Title.setText("Relatório Geral");
         Title.setPreferredSize(new java.awt.Dimension(360, 36));
-        outputText.setText(c.getGeneralReport());
-        // outputText.setText(c.getGeneralReport());
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGroup(layout
@@ -83,6 +83,7 @@ public class generalReport extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void closeButtonActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_closeButtonActionPerformed

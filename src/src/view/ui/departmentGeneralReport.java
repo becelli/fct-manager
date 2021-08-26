@@ -37,6 +37,8 @@ public class departmentGeneralReport extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
     // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -91,8 +93,6 @@ public class departmentGeneralReport extends javax.swing.JFrame {
                                                 Short.MAX_VALUE)))
                         .addGroup(layout.createSequentialGroup().addGroup(layout
                                 .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(
-                                        layout.createSequentialGroup().addGap(153, 153, 153).addComponent(closeButton))
                                 .addGroup(layout.createSequentialGroup().addGap(118, 118, 118).addComponent(jLabel1))
                                 .addGroup(layout.createSequentialGroup().addGap(111, 111, 111)
                                         .addComponent(dptmName, javax.swing.GroupLayout.PREFERRED_SIZE,
@@ -101,7 +101,9 @@ public class departmentGeneralReport extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(searchButton)))
                                 .addGap(0, 117, Short.MAX_VALUE)))
-                .addContainerGap()));
+                .addContainerGap())
+                .addGroup(layout.createSequentialGroup().addGap(158, 158, 158).addComponent(closeButton)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
         layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGroup(layout
                 .createSequentialGroup()
                 .addComponent(Title, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -117,6 +119,7 @@ public class departmentGeneralReport extends javax.swing.JFrame {
                 .addContainerGap()));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void dptmCodeActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_dptmCodeActionPerformed

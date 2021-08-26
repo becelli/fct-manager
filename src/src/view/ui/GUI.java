@@ -65,7 +65,11 @@ public class GUI extends javax.swing.JFrame {
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         setForeground(java.awt.Color.darkGray);
-        setMinimumSize(new java.awt.Dimension(480, 270));
+        setMaximizedBounds(new java.awt.Rectangle(857, 478, 478, 478));
+        setMaximumSize(new java.awt.Dimension(857, 478));
+        setMinimumSize(new java.awt.Dimension(857, 478));
+        setResizable(false);
+        setSize(new java.awt.Dimension(857, 478));
 
         jLabel1.setBackground(new java.awt.Color(0, 147, 221));
         jLabel1.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
@@ -101,7 +105,7 @@ public class GUI extends javax.swing.JFrame {
         jToggleButton1.setBackground(new java.awt.Color(33, 150, 243));
         jToggleButton1.setFont(new java.awt.Font("Roboto Light", 1, 18)); // NOI18N
         jToggleButton1.setForeground(new java.awt.Color(240, 240, 240));
-        jToggleButton1.setText("Buscar");
+        jToggleButton1.setText("Excluir");
         jToggleButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jToggleButton1.setOpaque(true);
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -407,6 +411,7 @@ public class GUI extends javax.swing.JFrame {
         getAccessibleContext().setAccessibleName("Unesp");
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void addEffectiveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addEffectiveActionPerformed
@@ -556,7 +561,7 @@ public class GUI extends javax.swing.JFrame {
     private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new addButton(c).setVisible(true);
+                new add(c).setVisible(true);
             }
         });
     }//GEN-LAST:event_addButtonActionPerformed
@@ -578,7 +583,7 @@ public class GUI extends javax.swing.JFrame {
     }// GEN-LAST:event_addSubstituteActionPerformed
 
     private void addDepartmentActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_addDepartmentActionPerformed
-        // TODO addButton your handling code here:
+        // TODO add your handling code here:
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new addDepartment(c).setVisible(true);

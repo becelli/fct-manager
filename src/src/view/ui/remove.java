@@ -33,7 +33,7 @@ public class remove extends javax.swing.JFrame {
         departmentButton = new javax.swing.JButton();
         employeeButton = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
 
         Title.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N

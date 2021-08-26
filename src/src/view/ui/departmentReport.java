@@ -40,6 +40,7 @@ public class departmentReport extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
     // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -55,7 +56,7 @@ public class departmentReport extends javax.swing.JFrame {
         outputText.setColumns(20);
         outputText.setRows(5);
         outputTextScroll.setViewportView(outputText);
-
+        outputText.setText(c.departmentReport());
         closeButton.setText("Fechar");
         closeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -68,7 +69,6 @@ public class departmentReport extends javax.swing.JFrame {
         Title.setText("Resumo dos departamentos");
         Title.setPreferredSize(new java.awt.Dimension(360, 36));
 
-        outputText.setText(c.departmentReport());
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -90,6 +90,7 @@ public class departmentReport extends javax.swing.JFrame {
                 .addContainerGap()));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void dptmCodeActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_dptmCodeActionPerformed

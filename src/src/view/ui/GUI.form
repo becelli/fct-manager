@@ -365,8 +365,18 @@
     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
       <Color blue="40" green="40" id="darkGray" palette="1" red="40" type="palette"/>
     </Property>
+    <Property name="maximizedBounds" type="java.awt.Rectangle" editor="org.netbeans.beaninfo.editors.RectangleEditor">
+      <Rectangle value="[857, 478, 478, 478]"/>
+    </Property>
+    <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[857, 478]"/>
+    </Property>
     <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-      <Dimension value="[480, 270]"/>
+      <Dimension value="[857, 478]"/>
+    </Property>
+    <Property name="resizable" type="boolean" value="false"/>
+    <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+      <Dimension value="[857, 478]"/>
     </Property>
   </Properties>
   <AccessibilityProperties>
@@ -375,7 +385,7 @@
   <SyntheticProperties>
     <SyntheticProperty name="menuBar" type="java.lang.String" value="Menu"/>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
-    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="true"/>
   </SyntheticProperties>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
@@ -529,7 +539,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="f0" green="f0" red="f0" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Buscar"/>
+        <Property name="text" type="java.lang.String" value="Excluir"/>
         <Property name="horizontalTextPosition" type="int" value="0"/>
         <Property name="opaque" type="boolean" value="true"/>
       </Properties>

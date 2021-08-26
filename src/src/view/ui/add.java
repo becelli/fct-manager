@@ -7,11 +7,11 @@ package src.view.ui;
 
 import src.controller.Controller;
 
-public class addButton extends javax.swing.JFrame {
+public class add extends javax.swing.JFrame {
 
     private Controller c;
 
-    public addButton(Controller c) {
+    public add(Controller c) {
         this.c = c;
         initComponents();
     }
@@ -32,7 +32,9 @@ public class addButton extends javax.swing.JFrame {
         technicianButton = new javax.swing.JButton();
         substituteButton = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Cadastro Unesp");
+        setAlwaysOnTop(true);
         setResizable(false);
 
         Title.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
@@ -115,6 +117,7 @@ public class addButton extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void departmentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_departmentButtonActionPerformed
