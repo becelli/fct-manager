@@ -8,22 +8,22 @@ import java.util.logging.Logger;
 public class University {
     private String name;
     private Department[] departments;
-    private int max = 100;
+    private int MAX = Constants.getMaxDepartments();
     private int count = 0;
     private int totalEmployees = 0;
 
     public University() {
         this.name = "";
-        this.departments = new Department[max];
+        this.departments = new Department[MAX];
     }
 
     public University(String name) {
         this.name = name;
-        this.departments = new Department[max];
+        this.departments = new Department[MAX];
     }
 
     public void addDepartment(String name) {
-        if (count < max) {
+        if (count < MAX) {
             departments[count] = new Department(Integer.toString(count + 1), name);
             count++;
         }
@@ -49,7 +49,10 @@ public class University {
 
     public String showDepartmentInfoByCode(String code) {
         Department d = searchDepartmentByCode(code);
-        return d.report() + "\n" + d.getAllEmployees();
+        if (d != null)
+            return d.report() + "\n" + d.getAllEmployees();
+        return "Nenhuma informação disponível";
+        // return
     }
 
     public String showDepartmentInfoByName(String name) {
@@ -191,7 +194,7 @@ public class University {
         for (int i = 0; i < count; i++) {
             int totalEmployees = departments[i].getCount();
             for (int j = 0; j < totalEmployees; j++) {
-                if(departments[i] != null){
+                if (departments[i] != null) {
                     e = departments[i].searchEmployeeByName(j, name);
                     if (e != null) {
                         if (r.equals("Não encontrado"))
@@ -208,7 +211,7 @@ public class University {
     public String searchEmployeeById(String id) {
         Employee e;
         for (int i = 0; i < count; i++) {
-            if(departments[i] != null){
+            if (departments[i] != null) {
                 e = departments[i].searchEmployeeById(id);
                 if (e != null)
                     return departments[i].getEmployeeInfo(e) + "\n";

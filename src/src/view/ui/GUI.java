@@ -14,7 +14,8 @@ public class GUI extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
@@ -65,11 +66,8 @@ public class GUI extends javax.swing.JFrame {
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         setForeground(java.awt.Color.darkGray);
-        setMaximizedBounds(new java.awt.Rectangle(857, 478, 478, 478));
-        setMaximumSize(new java.awt.Dimension(857, 478));
-        setMinimumSize(new java.awt.Dimension(857, 478));
+        setMinimumSize(new java.awt.Dimension(480, 270));
         setResizable(false);
-        setSize(new java.awt.Dimension(857, 478));
 
         jLabel1.setBackground(new java.awt.Color(0, 147, 221));
         jLabel1.setFont(new java.awt.Font("Roboto Light", 1, 14)); // NOI18N
@@ -85,7 +83,8 @@ public class GUI extends javax.swing.JFrame {
         jSeparator1.setForeground(new java.awt.Color(33, 150, 243));
 
         jLabel3.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
-        jLabel3.setText("Seja bem-vindo(a) ao cadastro de departamentos e funcionários da Universidade Estadual Paulista.");
+        jLabel3.setText(
+                "Seja bem-vindo(a) ao cadastro de departamentos e funcionários da Universidade Estadual Paulista.");
         jLabel3.setPreferredSize(new java.awt.Dimension(620, 10));
 
         jLabel4.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
@@ -105,7 +104,7 @@ public class GUI extends javax.swing.JFrame {
         jToggleButton1.setBackground(new java.awt.Color(33, 150, 243));
         jToggleButton1.setFont(new java.awt.Font("Roboto Light", 1, 18)); // NOI18N
         jToggleButton1.setForeground(new java.awt.Color(240, 240, 240));
-        jToggleButton1.setText("Excluir");
+        jToggleButton1.setText("Buscar");
         jToggleButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jToggleButton1.setOpaque(true);
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -118,7 +117,7 @@ public class GUI extends javax.swing.JFrame {
 
         Menu.setForeground(new java.awt.Color(240, 240, 240));
         Menu.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
-        Menu.setMaximumSize(new java.awt.Dimension(400, 32769));
+        // Menu.setMAX_EMPLOYEESimumSize(new java.awt.Dimension(400, 32769));
 
         addMenu.setText("Cadastrar");
         addMenu.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
@@ -363,50 +362,59 @@ public class GUI extends javax.swing.JFrame {
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(9, 9, 9)
-                        .addComponent(jLabel5)
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 845, Short.MAX_VALUE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.LEADING))
-                        .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(58, 58, 58)
-                        .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(252, 252, 252))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(55, 55, 55)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
+                        Short.MAX_EMPLOYEES_VALUE)
+                .addGroup(layout.createSequentialGroup().addContainerGap().addGroup(layout
+                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 250,
+                                        Short.MAX_EMPLOYEES_VALUE)
+                                .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 150,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(75, 75, 75)
+                                .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(250, Short.MAX_EMPLOYEES_VALUE))
+                        .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_EMPLOYEES_VALUE)
+                                                .addGap(9, 9, 9).addComponent(jLabel5))
+                                        .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_EMPLOYEES_VALUE)
+                                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_EMPLOYEES_VALUE)
+                                        .addComponent(jSeparator1))
+                                .addContainerGap()))));
+        layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGroup(
+                javax.swing.GroupLayout.Alignment.TRAILING,
+                layout.createSequentialGroup().addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_EMPLOYEES_VALUE)
+                                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_EMPLOYEES_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10,
+                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 50,
+                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 50,
+                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(55, 55, 55)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 60,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 60,
+                                        javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70,
+                                Short.MAX_EMPLOYEES_VALUE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 80,
+                                javax.swing.GroupLayout.PREFERRED_SIZE)));
 
         getAccessibleContext().setAccessibleName("Unesp");
 
@@ -414,165 +422,165 @@ public class GUI extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void addEffectiveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addEffectiveActionPerformed
+    private void addEffectiveActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_addEffectiveActionPerformed
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new addPermanent(c).setVisible(true);
             }
         });
-    }//GEN-LAST:event_addEffectiveActionPerformed
+    }// GEN-LAST:event_addEffectiveActionPerformed
 
-    private void generalReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generalReportActionPerformed
+    private void generalReportActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_generalReportActionPerformed
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new generalReport(c).setVisible(true);
             }
         });
-    }//GEN-LAST:event_generalReportActionPerformed
+    }// GEN-LAST:event_generalReportActionPerformed
 
-    private void searchDepartmentByCodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchDepartmentByCodeActionPerformed
+    private void searchDepartmentByCodeActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_searchDepartmentByCodeActionPerformed
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new searchDepartmentByCode(c).setVisible(true);
             }
         });
-    }//GEN-LAST:event_searchDepartmentByCodeActionPerformed
+    }// GEN-LAST:event_searchDepartmentByCodeActionPerformed
 
-    private void searchDepartmentByNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchDepartmentByNameActionPerformed
+    private void searchDepartmentByNameActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_searchDepartmentByNameActionPerformed
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new searchDepartmentByName(c).setVisible(true);
             }
         });
-    }//GEN-LAST:event_searchDepartmentByNameActionPerformed
+    }// GEN-LAST:event_searchDepartmentByNameActionPerformed
 
-    private void removeEmployeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeEmployeeActionPerformed
+    private void removeEmployeeActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_removeEmployeeActionPerformed
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new removeEmployee(c).setVisible(true);
             }
-        }); 
-    }//GEN-LAST:event_removeEmployeeActionPerformed
+        });
+    }// GEN-LAST:event_removeEmployeeActionPerformed
 
-    private void removeDepartmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeDepartmentActionPerformed
+    private void removeDepartmentActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_removeDepartmentActionPerformed
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new removeDepartment(c).setVisible(true);
             }
         });
-    }//GEN-LAST:event_removeDepartmentActionPerformed
+    }// GEN-LAST:event_removeDepartmentActionPerformed
 
-    private void departmentGeneralReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_departmentGeneralReportActionPerformed
-        java.awt.EventQueue.invokeLater(new Runnable() {            
+    private void departmentGeneralReportActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_departmentGeneralReportActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new departmentGeneralReport(c).setVisible(true);
             }
         });
-    }//GEN-LAST:event_departmentGeneralReportActionPerformed
+    }// GEN-LAST:event_departmentGeneralReportActionPerformed
 
-    private void substituteReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_substituteReportActionPerformed
-        java.awt.EventQueue.invokeLater(new Runnable() {            
+    private void substituteReportActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_substituteReportActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new substituteReport(c).setVisible(true);
             }
         });
-    }//GEN-LAST:event_substituteReportActionPerformed
+    }// GEN-LAST:event_substituteReportActionPerformed
 
-    private void effectiveReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_effectiveReportActionPerformed
-        java.awt.EventQueue.invokeLater(new Runnable() {            
+    private void effectiveReportActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_effectiveReportActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new permanentReport(c).setVisible(true);
             }
         });
-    }//GEN-LAST:event_effectiveReportActionPerformed
+    }// GEN-LAST:event_effectiveReportActionPerformed
 
-    private void professorReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_professorReportActionPerformed
-        java.awt.EventQueue.invokeLater(new Runnable() {            
+    private void professorReportActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_professorReportActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new professorReport(c).setVisible(true);
             }
         });
-    }//GEN-LAST:event_professorReportActionPerformed
+    }// GEN-LAST:event_professorReportActionPerformed
 
-    private void technicianReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_technicianReportActionPerformed
-        java.awt.EventQueue.invokeLater(new Runnable() {            
+    private void technicianReportActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_technicianReportActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new technicianReport(c).setVisible(true);
             }
         });
-    }//GEN-LAST:event_technicianReportActionPerformed
+    }// GEN-LAST:event_technicianReportActionPerformed
 
-    private void employeeGeneralReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_employeeGeneralReportActionPerformed
-        java.awt.EventQueue.invokeLater(new Runnable() {            
+    private void employeeGeneralReportActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_employeeGeneralReportActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new allEmployees(c).setVisible(true);
             }
         });
-    }//GEN-LAST:event_employeeGeneralReportActionPerformed
+    }// GEN-LAST:event_employeeGeneralReportActionPerformed
 
-    private void employeeBySalarylReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_employeeBySalarylReportActionPerformed
-        java.awt.EventQueue.invokeLater(new Runnable() {            
+    private void employeeBySalarylReportActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_employeeBySalarylReportActionPerformed
+        java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new employeesBySalaryReport(c).setVisible(true);
             }
         });
-    }//GEN-LAST:event_employeeBySalarylReportActionPerformed
+    }// GEN-LAST:event_employeeBySalarylReportActionPerformed
 
-    private void departmentSalaryReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_departmentSalaryReportActionPerformed
+    private void departmentSalaryReportActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_departmentSalaryReportActionPerformed
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new departmentReportByCost(c).setVisible(true);
             }
         });
-    }//GEN-LAST:event_departmentSalaryReportActionPerformed
+    }// GEN-LAST:event_departmentSalaryReportActionPerformed
 
-    private void departmentGeneralInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_departmentGeneralInfoActionPerformed
+    private void departmentGeneralInfoActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_departmentGeneralInfoActionPerformed
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new departmentReport(c).setVisible(true);
             }
         });
-    }//GEN-LAST:event_departmentGeneralInfoActionPerformed
+    }// GEN-LAST:event_departmentGeneralInfoActionPerformed
 
-    private void searchEmployeeByIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchEmployeeByIdActionPerformed
+    private void searchEmployeeByIdActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_searchEmployeeByIdActionPerformed
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new searchEmployeeById(c).setVisible(true);
             }
         });
-    }//GEN-LAST:event_searchEmployeeByIdActionPerformed
+    }// GEN-LAST:event_searchEmployeeByIdActionPerformed
 
-    private void searchEmployeeByNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchEmployeeByNameActionPerformed
+    private void searchEmployeeByNameActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_searchEmployeeByNameActionPerformed
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new searchEmployeeByName(c).setVisible(true);
             }
         });
-    }//GEN-LAST:event_searchEmployeeByNameActionPerformed
+    }// GEN-LAST:event_searchEmployeeByNameActionPerformed
 
-    private void searchEmployeeBySalaryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchEmployeeBySalaryActionPerformed
+    private void searchEmployeeBySalaryActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_searchEmployeeBySalaryActionPerformed
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new employeesBySalaryReport(c).setVisible(true);
             }
         });
-    }//GEN-LAST:event_searchEmployeeBySalaryActionPerformed
+    }// GEN-LAST:event_searchEmployeeBySalaryActionPerformed
 
-    private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
+    private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_addButtonActionPerformed
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new add(c).setVisible(true);
             }
         });
-    }//GEN-LAST:event_addButtonActionPerformed
+    }// GEN-LAST:event_addButtonActionPerformed
 
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
+    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_jToggleButton1ActionPerformed
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new remove(c).setVisible(true);
+                new search(c).setVisible(true);
             }
         });
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
+    }// GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void addSubstituteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_addSubstituteActionPerformed
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -603,86 +611,64 @@ public class GUI extends javax.swing.JFrame {
     }
 
     public static void main(String args[]) {
-        c.addDepartment("Sapo");
-        c.addDepartment("Fatiminha");
-        c.addDepartment("Vento");
-        int MAX = 20;
         Random rand = new Random();
-        for (int i = 0; i < MAX; i++) {
-            int f = rand.nextInt(3);
-            if (f == 0) {
-                double s = rand.nextDouble() > 0.7 ? 7000.0 : 6000.0;
-                int t = rand.nextInt(3);
-                String nivel;
-                if (t == 1)
-                    nivel = "D1";
-                else if (t == 2)
-                    nivel = "D2";
-                else
-                    nivel = "D3";
-                int u = rand.nextInt(5);
-                String degree;
-                if (u == 0)
-                    degree = "Graduação";
-                else if (u == 1)
-                    degree = "Doutorado";
-                else if (u == 2)
-                    degree = "Titular";
-                else if (u == 3)
-                    degree = "Mestrado";
-                else if (u == 4)
-                    degree = "Livre-Docente";
-                else
-                    degree = "Titular";
+        int MAX_EMPLOYEES = 20;
+        // CREATE THE DEPARTMENTS
+        String[] professorDegree = new String[] { "Graduação", "Doutorado", "Titular", "Mestrado", "Livre-Docente",
+                "Titular" };
 
-                int v = rand.nextInt(4);
-                String area;
-                if (v == 0)
-                    area = "Biológicas";
-                else if (v == 1)
-                    area = "Exatas";
-                else if (v == 2)
-                    area = "Humanas";
-                else
-                    area = "Saúde";
-                c.addPermanent("Vento", Integer.toString(i + 1), "Fátima", s, nivel, degree, area);
-            } else if (f == 1) {
-                double s = rand.nextDouble() > 0.7 ? 4000.0 : 3000.0;
-                int t = rand.nextInt(2);
-                String nivel;
-                if (t == 1)
-                    nivel = "S1";
-                else
-                    nivel = "S2";
-                int u = rand.nextInt(4);
-                String degree;
-                if (u == 0) {
-                    degree = "Livre-Docente";
-                } else if (u == 1) {
-                    degree = "Mestrado";
-                } else if (u == 2)
-                    degree = "Titular";
-                else
-                    degree = "Saúde";
-                int workload = rand.nextDouble() > 0.5 ? 12 : 24;
-                c.addSubstitute("Sapo", Integer.toString(i + 1), "Cleiton", s, nivel, degree, workload);
-            } else {
-                double s = rand.nextDouble() > 0.7 ? 3000.0 : 2000.0;
-                int t = rand.nextInt(2);
-                String nivel;
-                if (t == 1)
-                    nivel = "T1";
-                else
-                    nivel = "T2";
-                int u = rand.nextInt(3);
-                String funcao;
-                if (u == 0) {
-                    funcao = "Assessor";
-                } else if (u == 1) {
-                    funcao = "Laboratório";
-                } else
-                    funcao = "Secretário";
-                c.addTechnician("Fatiminha", Integer.toString(i + 1), "Jackson", s, nivel, funcao);
+        String[] dpName = new String[] { "Computação", "Física", "Estatística" };
+        String[] permanentLevel = new String[] { "D1", "D2", "D3" };
+        String[] permanentArea = new String[] { "Biológicas", "Exatas", "Humanas", "Saúde" };
+
+        String[] substituteLevel = new String[] { "S1", "S2" };
+
+        String[] technicianLevel = new String[] { "T1", "T2" };
+        String[] technicianFunction = new String[] { "Assessor", "Laboratório", "Secretário" };
+
+        // CREATE NAMES
+        String[] employeeName = new String[] { "Carla", "Suzana", "Paulo", "Renato", "Poliana", "Marcelo", "Ursula",
+                "Melissa", "Fernando", "Nathan", "Tatiana", "Vanessa", "Gabriel", "Walter", "Bruna", "Hugo", "Danilo",
+                "Karina", "Renata", "Gerson", "Sabrina", "Xavier", "João Carlos", "Jackson", "Márcia", "Luís Henrique",
+                "Fabrício", "Leonidas", "Daniel", "Keoma", "Thaís", "Paola", "Marcos", "Stella", "Amanda", "Jéssica",
+                "Adriano", "Gustavo", "Guilherme", "Caroline", "Victor", "Anielly", "Heloísa", "Patrícia", "Sinézio",
+                "Thomas", "Luísa", "Antônio", "Igor", "Júlio", "Karen", "Lucas Vinícius", "Túlio", "Isabel", "Daiane",
+                "Cláudia", "Júlia", "Leonardo", "Thiago", "Caio", "Nathália", "Giovana", "Matheus", "Breno", "Alice",
+                "Sofia", "Marcela", "Rodrigo", "Pâmela", "Ramão", "Marina", "Alexia", "Alex", "Tainara", "Felipe",
+                "Dafiny", "Laura", "Olívia", "Rayana", "Noah", "Gael", "Enzo", "Valentina", "Letícia", "Daihanny",
+                "Rayssa", "Diego", "Jonathan", "Andreia", "Caique", "Ricardo", "Delei", "Dirce", "Silvana", "Rosangela",
+                "Loreni" };
+        for (int i = 0; i < dpName.length; i++)
+            c.addDepartment(dpName[i]);
+        // ADD THE EMPLOYEES
+        for (int i = 0; i < MAX_EMPLOYEES; i++) {
+            String department = dpName[rand.nextInt(dpName.length)];
+            String id = Integer.toString(i + 1);
+            String name = employeeName[rand.nextInt(employeeName.length)];
+            double salary = rand.nextDouble() > 0.7 ? 7000.0 : 6000.0;
+            String level;
+            String degree;
+            int f = rand.nextInt(3);
+            switch (f) {
+                case 0: // PERMANENT
+                    level = permanentLevel[rand.nextInt(permanentLevel.length)];
+                    degree = professorDegree[rand.nextInt(professorDegree.length)];
+                    String area = permanentArea[rand.nextInt(permanentArea.length)];
+
+                    c.addPermanent(department, id, name, salary, level, degree, area);
+                    break;
+                case 1: // SUBSTITUTE
+                    level = substituteLevel[rand.nextInt(substituteLevel.length)];
+                    degree = professorDegree[rand.nextInt(professorDegree.length)];
+                    int workload = rand.nextDouble() > 0.5 ? 12 : 24;
+
+                    c.addSubstitute(department, id, name, salary, level, degree, workload);
+                    break;
+                case 2: // TECHNICIAN
+                    level = technicianLevel[rand.nextInt(technicianLevel.length)];
+                    String function = technicianFunction[rand.nextInt(technicianFunction.length)];
+                    c.addTechnician(department, id, name, salary, level, function);
+                    break;
             }
         }
         java.awt.EventQueue.invokeLater(new Runnable() {

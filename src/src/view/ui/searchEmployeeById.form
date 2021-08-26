@@ -66,8 +66,8 @@
                   <Component id="id" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="outputTextScroll" min="-2" pref="45" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <Component id="outputTextScroll" min="-2" pref="33" max="-2" attributes="0"/>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="closeButton" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -77,6 +77,8 @@
   <SubComponents>
     <Container class="javax.swing.JScrollPane" name="outputTextScroll">
       <Properties>
+        <Property name="horizontalScrollBarPolicy" type="int" value="31"/>
+        <Property name="verticalScrollBarPolicy" type="int" value="21"/>
         <Property name="wheelScrollingEnabled" type="boolean" value="false"/>
       </Properties>
       <AuxValues>

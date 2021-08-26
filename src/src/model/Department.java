@@ -4,8 +4,7 @@ public class Department implements Cloneable {
     private String code;
     private String name;
     private Employee employees[];
-    private final int MAX = 100;
-    private int ACTIVE = MAX;
+    private final int MAX = Constants.getMaxEmployees();
     private int count;
 
     public Department(String code, String name) {
@@ -27,7 +26,6 @@ public class Department implements Cloneable {
             if (employees[i] != null)
                 if (employees[i].getId().equals(id)) {
                     employees[i] = null;
-                    ACTIVE--;
                     return true;
                 }
         }
@@ -39,7 +37,6 @@ public class Department implements Cloneable {
             if (employees[i] != null)
                 if (employees[i].getName().equals(name)) {
                     employees[i] = null;
-                    ACTIVE--;
                     return true;
                 }
         return false;

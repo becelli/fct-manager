@@ -1,6 +1,9 @@
 package src.model;
 
 public class Constants {
+    // MAXIMUM
+    public final static int MAX_EMPLOYEES = 10000;
+    public final static int MAX_DEPARTMENTS = 50;
     // TECHNICIAN
     public final static String[] techLevels = new String[] { "T1", "T2" };
     public final static double[] techSalaries = new double[] { 1.1, 1.2 };
@@ -14,6 +17,14 @@ public class Constants {
     public final static String[] permLevels = new String[] { "D1", "D2", "D3" };
     public final static double[] permSalaries = new double[] { 1.05, 1.1, 1.2 };
     public final static double additional = 0.05;
+
+    public static int getMaxEmployees() {
+        return MAX_EMPLOYEES;
+    }
+
+    public static int getMaxDepartments() {
+        return MAX_DEPARTMENTS;
+    }
 
     // **************
     // TECHNICIAN
